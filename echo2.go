@@ -1,3 +1,5 @@
+// Echo2 Exercise 1.2
+
 package main
 
 import (
@@ -6,10 +8,7 @@ import (
 )
 
 func main() {
-	s, sep := "", ""
-	for _, arg := range os.Args[1:] {
-		s += sep + arg
-		sep = " "
+	for i, arg := range os.Args[0:] {
+		fmt.Println(i, arg)
 	}
-	fmt.Println(s)
 }
